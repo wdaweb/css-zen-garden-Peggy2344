@@ -1,0 +1,323 @@
+/* css Zen Garden default style v1.02 */
+/* css released under Creative Commons License - http://creativecommons.org/licenses/by-nc-sa/1.0/  */
+
+/* This file based on 'Tranquille' by Dave Shea */
+/* You may use this file as a foundation for any new work, but you may find it easier to start from scratch. */
+/* Not all elements are defined in this file, so you'll most likely want to refer to the xhtml as well. */
+
+/* Your images should be linked as if the CSS file sits in the same folder as the images. ie. no paths. */
+
+/* basic elements */
+.title{
+   --animate-delay: 0.3s;
+   --animate-duration: 2s;
+}
+.small-title{
+   --animate-duration: 1s;
+}
+html {
+   margin: 0;
+   padding: 0;
+}
+body {
+   font-family: 'Roboto', sans-serif;
+   line-height: 1.88889;
+   margin: 0;
+   padding: 0;
+   font-family: 'Roboto', sans-serif;
+}
+p {
+   margin-top: 0;
+   text-align: justify;
+}
+a {
+   position: relative;
+   text-decoration: none;
+}
+a::after{
+   content: '';
+   position: absolute;
+   left: 50%;
+   right: 50%;
+   bottom: -5px;
+   height: 0;
+   border-bottom: 1px solid #2B10BF;
+   transition: .3s;
+}
+a:hover::after{
+   right: 0;
+   left: 0;
+}
+abbr {
+   border-bottom: none;
+}
+
+.intro {
+   min-width: 470px;
+   width: 100%;
+   height: 200vh;
+   background: linear-gradient(to right, #97E39A,  #97E39A 30%, #ECE9C3 30%);
+   position: relative;
+}
+
+header {
+   position: absolute;
+   left: 10%;
+   top: 15%;
+}
+
+header h1 {
+   margin-top: 10px;
+   margin-bottom: 0;
+   display: block;
+   height: 87px;
+   white-space: nowrap;
+   overflow: hidden;
+   color: #706145;
+   font-weight: 800;
+   font-size: 4rem;
+   letter-spacing: 1rem;
+}
+header h2 {
+   font-size: 1.2rem;
+   color: #706145;
+   text-indent: 55%;
+   letter-spacing: 0.2rem;
+   overflow: hidden;
+}
+
+.summary {
+   position: absolute;
+   top: 35%;
+   left: 40%;
+   width: 40%;
+}
+.summary p {
+   font-size: 1rem;
+   color: #706145;
+   font-weight: 500;
+}
+.summary a {
+   color: #2B10BF;
+}
+.preamble {
+   position: absolute;
+   top:50%;
+   width: 100%;
+   height: 100vh;
+   background: #F5C2BF;
+}
+.preamble::before {
+   content: '';
+   width: 50%;
+   height: 75%;
+   position: absolute;
+   top: 20%;
+   left: 25%;
+   background-color: #DAE4FC;
+}
+.preamble h3 {
+   margin-left: 10%;
+   width: 32%;
+   letter-spacing: 0.3rem;
+   font-size: 1.8rem;
+   color: #2B10BF;
+   font-weight: 800;
+   border-top: 5px solid #2B10BF;
+   border-bottom: 5px solid #2B10BF;
+}
+.preamble p {
+   width: 40%;
+   position: absolute;
+   left: 30%;
+   color: #2B10BF;
+   font-size: 1.2rem;
+   font-weight: 500;
+   letter-spacing: 0.1em;
+   font-family: 'Roboto', sans-serif;
+}
+.preamble p:nth-child(2) {
+   top: 30%;
+}
+.preamble p:nth-child(3) {
+   top: 50%;
+}
+.preamble p:nth-child(4) {
+   top: 70%;
+}
+.supporting h3 {
+   position: absolute;
+   top: 50%;
+   transform: translateY(-50%);
+   width: 50%;
+   font-size: 2.5rem;
+   color: #706145;
+   text-align: center;
+   letter-spacing: 0.2rem;
+   margin: 0;
+}
+.supporting p {
+   width: 30%;
+   color:#706145;
+   font-size: 1rem;
+   font-weight: 500;
+   letter-spacing: 0.1em;
+   margin-bottom: 0;
+}
+.explanation {
+   position: relative;
+   width: 100%;
+   height: 75vh;
+   background: linear-gradient(to right, #FAF160, #FAF160 50%, #DAE4FC 50%);
+}
+.explanation p {
+   position: absolute;
+   /* transform: translateY(30%); */
+   left: 60%;
+}
+.explanation p:nth-child(2){
+   top: 20%;
+}
+.explanation p:nth-child(3){
+   top: 50%;
+}
+.participation{
+   position: relative;
+   width: 100%;
+   height: 85vh;
+   background: linear-gradient(to left, #FAF160, #FAF160 50%, #DAE4FC 50%);
+}
+.participation h3 {
+   right: 15%;
+   width: 20%;
+}
+.participation p {
+   position: absolute;
+   right: 60%;
+}
+.participation p:nth-child(2) {
+   top: 15%;
+}
+.participation p:nth-child(3) {
+   top: 45%;
+}
+.participation p:nth-child(4) {
+   top: 65%;
+}
+.benefits {
+   position: relative;
+   width: 100%;
+   height: 50vh;
+   background: linear-gradient(to right, #FAF160, #FAF160 50%, #DAE4FC 50%);
+}
+.benefits p {
+   position: absolute;
+   top: 35%;
+   left: 60%;
+}
+.requirements {
+   position: relative;
+   width: 100%;
+   height: 150vh;
+   background: #F5C2BF;
+}
+.requirements::before {
+   content: '';
+   width: 50%;
+   height: 75%;
+   position: absolute;
+   top: 15%;
+   left: 15%;
+   background-color: #DAE4FC;
+}
+.requirements h3 {
+   top: 10%;
+   width: 30%;
+   font-size: 2.5rem;
+   border-top: 5px solid #2B10BF;
+   border-bottom: 5px solid #2B10BF;
+   color: #2B10BF;
+   margin-left: 5%;
+}
+.requirements p {
+   color: #2B10BF;
+   width: 40%;
+   position: absolute;
+   margin-left: 20%;
+   z-index: 2;
+}
+.requirements p:nth-child(2){
+   top: 20%;
+}
+.requirements p:nth-child(3){
+   top: 35%;
+}
+.requirements p:nth-child(4){
+   top: 53%;
+}
+.requirements p:nth-child(5){
+   top: 65%;
+}
+.requirements p:last-child{
+   position: absolute;
+   top: 80%;
+   font-weight: 600;
+   padding-bottom: 0.5rem;
+   border-bottom: 8px solid #FAF160;
+}
+.sidebar {
+   position: absolute;
+   top: 410vh;
+   right: 0;
+   width: 20%;
+   box-shadow: -5px 5px 50px #c7c7c2;
+   background: #fff;
+   color: #706145;
+}
+.sidebar .wrapper {
+   font: 1rem;
+   padding: 30px;
+}
+.sidebar .wrapper h3{
+   color: #2B10BF;
+}
+
+.sidebar ul {
+   margin: 0;
+   padding: 0;
+}
+.sidebar li {
+   line-height: 1.3rem;
+   font-weight: 400;
+   display: block;
+   padding-top: 5px;
+   margin-bottom: 10px;
+   list-style-type: none;
+   color: #2B10BF;
+}
+.sidebar li a:first-child {
+   color: #706145;
+}
+.sidebar li a:first-child:hover::after {
+   color: #706145;
+}
+.sidebar li a {
+   color: #2B10BF;
+   font-weight: 400;
+}
+
+footer {
+   text-align: center;
+   background-color: #97E39A;
+   height: 15vh;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+footer a:link,
+footer a:visited {
+   font-weight: bold;
+   margin-right: 20px;
+   color: #565148;
+   font-size: 1.5rem;
+}
